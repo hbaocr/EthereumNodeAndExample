@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Betting Number on Blockchain</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <center>
+        <div id="metamask"></div>
+        
+        <h3> </h3>
+        <br />
+        <table>
+
+            <tr>
+                <td>Banker balance(ETH) :</td>
+                <td id="txtBanker" width="20">0</td>
+                <td>
+                    <input id="btnGetBankerBalance" type="button" onclick="getBankerBalances()" value="GetBankerBalance" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Player balance(ETH) :</td>
+                <td id="txtPlayer" width="20">0</td>
+                <td>
+                    <input id="btnGetPlayerBalance" type="button" onclick="getPlayerBalances()" value="GetPlayerBalance" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Deposite Ether(ETH) :</td>
+                <td>
+                    <input id="txtDeposit" type="number" step="0.01" value="0" width="20" />
+                </td>
+                <td>
+                    <input id="btnDeposit" type="button" onclick="deposit()" value="Deposite" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Withdraw Ether :</td>
+                <td>
+                    <input id="txtWithDraw" type="number" step="0.01" value="0" width="20" />
+                </td>
+                <td>
+                    <input id="btnWithDraw" type="button" onclick="withDraw()" value="Withdraw" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bet your Num 1-4:</td>
+                <td>
+                    <input id="txtBetNum" type="number" step="1" value="1" />
+                </td>
+                <td>
+                    <label>How much ETH</label>
+                    <input id="txtHowMuch" type="number" step="0.01" value="0.1" />
+                    <input id="btnBet" type="button" onclick="onBetting()" value="BetYourNumber" />
+                </td>
+            </tr>
+
+        </table>
+        <br />
+        <div id="txtStatus" ></div>
+        <br />
+        <div>Current Status Of Betting Process</div>
+        <div id="txtBettingResult"></div>
+    </center>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+<script src="./index.js"></script>
+
+</html>
